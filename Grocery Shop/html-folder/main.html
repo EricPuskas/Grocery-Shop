@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="login.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/2344d96b53.js" crossorigin="anonymous"></script>
+
+    <title>Grocery Shop</title>
+</head>
+
+<body>
+    <div class="navigation">
+        <div class="navigation-logo-text">
+            <i class="fas fa-store"></i>
+            <h3>Gospodaria Vass</h3>
+        </div>
+
+        <div class="navigation-list-menu">
+            <ul>
+                <li><a href="#">Acasa</a><i class="fas fa-home"></i>
+                </li>
+            </ul>
+            <ul>
+                <li><a href="#fruits">Produse</a><i class="fas fa-utensils"></i></li>
+            </ul>
+            <ul>
+                <li><a href="index.html">Cont</a><i class="fas fa-users"></i></li>
+            </ul>
+            <ul>
+                <li class="nav-item nav-item-show-product">
+                    <a class="nav-link" href="checkout.html">Shopping Cart & Checkout<i
+                            class="fas fa-cart-plus"></i></a>
+                    <ul class="nav navigation-shopping-cart navigation-shopping-hidden cart-item-row" id="item-in-cart">
+                        <li class="total-cost" id="totalcost"></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li><a href="contact.html">Contact</a><i class="fas fa-phone"></i></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="about-section">
+        <div class="about-section-image">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, enim officia labore minima laborum ad,
+                aliquid itaque cumque libero deleniti ullam. Temporibus odit aspernatur voluptas unde natus nobis
+                cupiditate
+                a?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At repudiandae, ad esse corporis quis, qui,
+                dolor quidem rem non iusto mollitia architecto. Reiciendis quas id ipsa eius excepturi sed? Minima.
+            </p>
+        </div>
+    </div>
+
+    <div class="products">
+        <div class="products-list">
+            <ul>
+                <li>
+
+                    <div class="product-list-item">
+                        <a href="#fruits"><img src="fruits.jpg" alt="fruits"></a>
+                        <h2>Fructe</h2>
+                    </div>
+                </li>
+                <li>
+                    <div class="product-list-item">
+                        <a href="#vegetables"><img src="vegetables.jpg" alt="fruits"></a>
+                        <h2>Legume</h2>
+                    </div>
+                    </a>
+                </li>
+                <li>
+                    <div class="product-list-item">
+                        <a href="#others"><img src="other_products.jpg" alt="fruits"></a>
+                        <h2>Alte Produse</h2>
+                    </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!---Products-->
+    <h1 style="text-align: center;" id="fruits">Fructe</h1>
+    <div class="card-container">
+        <div class="card bg-success">
+            <div class="card-image">
+                <img src="fruits/mar.jpg" alt="apple">
+            </div>
+            <div class="card-body">
+                <div class="card-text">
+                    <p>Apple $1.99</p>
+                    <i class="fas fa-plus" id="apple"
+                        onclick="addProductToCar(this.id), addProduct(this.id), totalCostTextChange()"></i>
+                    <i class="fas fa-minus" id="apple"
+                        onclick="removeProductFromCar(this.id), removeProduct(this.id), totalCostTextChange()"></i>
+                </div>
+                <div class="card-text">
+                    <a class="btn btn-primary" id="appleSack"
+                        onclick="addProductToCar(this.id), addProduct(this.id), totalCostOfProducts()">1 KG $11.99</a>
+                    <a class="btn btn-primary" id="appleSack"
+                        onclick="removeProductFromCar(this.id), removeProduct(this.id), totalCostTextChange()"
+                        style="margin-left: 15px;">Remove 1 KG</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card bg-success">
+            <div class="card-image">
+                <img src="fruits/bana.jpg" alt="bana">
+            </div>
+            <div class="card-body">
+                <div class="card-text">
+                    <p>Banana $2.99</p>
+                    <i class="fas fa-plus" id="banana"
+                        onclick="addProductToCar(this.id), addProduct(this.id), totalCostTextChange()"></i>
+                    <i class="fas fa-minus" id="banana"
+                        onclick="removeProductFromCar(this.id), removeProduct(this.id), totalCostTextChange()"></i>
+                </div>
+                <div class="card-text">
+                    <a class="btn btn-primary" id="bananaSack"
+                        onclick="addProductToCar(this.id), addProduct(this.id), totalCostTextChange()">1 KG $12.99</a>
+                    <a class="btn btn-primary" id="bananaSack"
+                        onclick="removeProductFromCar(this.id), removeProduct(this.id), totalCostTextChange()"
+                        style="margin-left: 15px;">Remove 1 KG</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card bg-success">
+            <div class="card-image">
+                <img src="fruits/porto.jpg" alt="apple">
+            </div>
+            <div class="card-body">
+                <div class="card-text">
+                    <p>Orange $2.99</p>
+                    <i class="fas fa-plus" id="orange"
+                        onclick="addProductToCar(this.id), addProduct(this.id), totalCostTextChange()"></i>
+                    <i class="fas fa-minus" id="orange"
+                        onclick="removeProductFromCar(this.id), removeProduct(this.id), totalCostTextChange()"></i>
+                </div>
+                <div class="card-text">
+                    <a class="btn btn-primary" id="orangeSack"
+                        onclick="addProductToCar(this.id), addProduct(this.id), totalCostTextChange()">1 KG $12.99</a>
+                    <a class="btn btn-primary" id="orangeSack"
+                        onclick="removeProductFromCar(this.id), removeProduct(this.id), totalCostTextChange()"
+                        style="margin-left: 15px;">Remove 1 KG</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card bg-success">
+            <div class="card-image">
+                <img src="fruits/capsuni.jpg" alt="apple">
+            </div>
+            <div class="card-body">
+                <div class="card-text">
+                    <p>Strawberries $3.99</p>
+                    <i class="fas fa-plus" id="strawberry"
+                        onclick="addProductToCar(this.id), addProduct(this.id), totalCostTextChange()"></i>
+                    <i style="margin-left: 10px;" class="fas fa-minus" id="strawberry"
+                        onclick="removeProductFromCar(this.id), removeProduct(this.id), totalCostTextChange()"></i>
+                </div>
+                <div class="card-text">
+                    <a class="btn btn-primary" id="strawberrySack"
+                        onclick="addProductToCar(this.id), addProduct(this.id), totalCostTextChange()">1 KG $13.99</a>
+                    <a class="btn btn-primary" id="strawberrySack"
+                        onclick="removeProductFromCar(this.id), removeProduct(this.id), totalCostTextChange()"
+                        style="margin-left: 15px;">Remove 1 KG</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1 style="text-align: center;" id="vegetables">Legume</h1>
+    <div class="card-container">
+        <div class="card bg-success">
+            <div class="card-image">
+                <img src="vegs/Potatoes-2.jpg" alt="apple">
+            </div>
+            <div class="card-body">
+                <div class="card-text">
+                    <p>Potato $2.99</p>
+                    <i class="fas fa-plus" id="potato"
+                        onclick="addProductToCar(this.id), addProduct(this.id), totalCostTextChange()"></i>
+                    <i class="fas fa-minus" id="potato"
+                        onclick="removeProductFromCar(this.id), removeProduct(this.id), totalCostTextChange()"></i>
+                </div>
+                <div class="card-text">
+                    <a class="btn btn-primary" id="potatoSack"
+                        onclick="addProductToCar(this.id), addProduct(this.id), totalCostTextChange()">1 KG $12.99</a>
+                    <a class="btn btn-primary" id="potatoSack"
+                        onclick="removeProductFromCar(this.id), removeProduct(this.id), totalCostTextChange()"
+                        style="margin-left: 15px;">Remove 1 KG</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card bg-success">
+            <div class="card-image">
+                <img src="vegs/Tomato_Thessaloniki.jpg" alt="bana">
+            </div>
+            <div class="card-body">
+                <div class="card-text">
+                    <p>Tomato $3.99</p>
+                    <i class="fas fa-plus" id="tomato"
+                        onclick="addProductToCar(this.id), addProduct(this.id), totalCostTextChange()"></i>
+                    <i class="fas fa-minus" id="tomato"
+                        onclick="removeProductFromCar(this.id), removeProduct(this.id), totalCostTextChange()"></i>
+                </div>
+                <div class="card-text">
+                    <a class="btn btn-primary" id="tomatoSack"
+                        onclick="addProductToCar(this.id), addProduct(this.id), totalCostTextChange()">1 KG $13.99</a>
+                    <a class="btn btn-primary" id="tomatoSack"
+                        onclick="removeProductFromCar(this.id), removeProduct(this.id), totalCostTextChange()"
+                        style="margin-left: 15px;">Remove 1 KG</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card bg-success">
+            <div class="card-image">
+                <img src="vegs/castraveti.jpg" alt="apple">
+            </div>
+            <div class="card-body">
+                <div class="card-text">
+                    <p>Castraveti $3.99</p>
+                    <i class="fas fa-plus" id="cucumber"
+                        onclick="addProductToCar(this.id), addProduct(this.id), totalCostTextChange()"></i>
+                    <i class="fas fa-minus" id="cucumber"
+                        onclick="removeProductFromCar(this.id), removeProduct(this.id), totalCostTextChange()"></i>
+                </div>
+                <div class="card-text">
+                    <a class="btn btn-primary" id="cucumberSack"
+                        onclick="addProductToCar(this.id), addProduct(this.id), totalCostTextChange()">1 KG $13.99</a>
+                    <a class="btn btn-primary" id="cucumberSack"
+                        onclick="removeProductFromCar(this.id), removeProduct(this.id), totalCostTextChange()"
+                        style="margin-left: 15px;">Remove 1 KG</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card bg-success">
+            <div class="card-image">
+                <img src="vegs/image.jpg" alt="apple">
+            </div>
+            <div class="card-body">
+                <div class="card-text">
+                    <p>Salata $0.99</p>
+                    <i class="fas fa-plus" id="lettuce"
+                        onclick="addProductToCar(this.id), addProduct(this.id), totalCostTextChange()"></i>
+                    <i class="fas fa-minus" id="lettuce"
+                        onclick="removeProductFromCar(this.id), removeProduct(this.id), totalCostTextChange()"></i>
+                </div>
+                <div class="card-text">
+                    <a class="btn btn-primary" id="lettuceSack"
+                        onclick="addProductToCar(this.id), addProduct(this.id), totalCostTextChange()">1 KG $10.99</a>
+                    <a class="btn btn-primary" id="lettuceSack"
+                        onclick="removeProductFromCar(this.id), removeProduct(this.id), totalCostTextChange()"
+                        style="margin-left: 15px;">Remove 1 KG</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1 style="text-align: center;" id="others">Milk products</h1>
+    <div class="card-container">
+        <div class="card bg-success">
+            <div class="card-image">
+                <i class="fas fa-paw"></i>
+            </div>
+            <div class="card-body">
+                <div class="card-text">
+                    <p>Goat Milk $1.99</p>
+                    <i class="fas fa-plus" id="goat"
+                        onclick="addProductToCar(this.id), addProduct(this.id), totalCostTextChange()"></i>
+                    <i class="fas fa-minus" id="goat"
+                        onclick="removeProductFromCar(this.id), removeProduct(this.id), totalCostTextChange()"></i>
+                </div>
+                <div class="card-text">
+                    <a class="btn btn-primary" id="goatSack"
+                        onclick="addProductToCar(this.id), addProduct(this.id), totalCostTextChange()">1L $11.99</a>
+                    <a class="btn btn-primary" id="goatSack"
+                        onclick="removeProductFromCar(this.id), removeProduct(this.id), totalCostTextChange()"
+                        style="margin-left: 15px;">Remove 1L</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card bg-success">
+            <div class="card-image">
+                <i class="fas fa-paw"></i>
+            </div>
+            <div class="card-body">
+                <div class="card-text">
+                    <p>Cow Milk $2.99</p>
+                    <i class="fas fa-plus" id="cow"
+                        onclick="addProductToCar(this.id), addProduct(this.id), totalCostTextChange()"></i>
+                    <i class="fas fa-minus" id="cow"
+                        onclick="removeProductFromCar(this.id), removeProduct(this.id), totalCostTextChange()"></i>
+                </div>
+                <div class="card-text">
+                    <a class="btn btn-primary" id="cowSack"
+                        onclick="addProductToCar(this.id), addProduct(this.id),totalCostTextChange()">1L $11.99</a>
+                    <a class="btn btn-primary" id="cowSack"
+                        onclick="removeProductFromCar(this.id), removeProduct(this.id), totalCostTextChange()"
+                        style="margin-left: 15px;">Remove 1L</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <h3>Copyright @Vass Krisztian "Kristo" Patrick 2020</h3>
+    </footer>
+
+    <script src="/scripts/basket.js"></script>
+    <script src="/scripts/basket_items.js"></script>
+
+</body>
+
+</html>
