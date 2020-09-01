@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2344d96b53.js" crossorigin="anonymous"></script>
+    <script src="../scripts/register.js"></script>
+    <title>Grocery Login</title>
+</head>
+<body>
+    <div class="navigation">
+        <div class="navigation-logo-text">
+            <i class="fas fa-store" style="margin-top: 20px;"></i>
+            <h3>Gospodaria Vass</h3>
+        </div>
+
+        <div class="navigation-list-menu">
+            <ul>
+                <li><a href="main.html">Acasa</a><i class="fas fa-home"></i>
+                </li>
+            </ul>
+            <ul>
+                <li><a href="../html-folder/main.html">Produse</a><i class="fas fa-utensils"></i></li>
+            </ul>
+            <ul>
+                <li><a href="index.html">Cont</a><i class="fas fa-users"></i></li>
+            </ul>
+            <ul>
+                <li><a href="contact.html">Contact</a><i class="fas fa-phone"></i></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <label for="uname"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" id="email-register" required>
+    
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" id="pass-register" required>
+    
+        <a href="#"><button type="submit" onclick="register()">Register account</button></a>
+      </div>
+    </div>
+
+    <footer class="other-footer">
+        <h3>Copyright @Vass Krisztian "Kristo" Patrick || 2020</h3>
+    </footer>
+
+ 
+    <script src="../controllers/auth.js"></script>
+    <script src="../controllers/main.js"></script>
+    
+</body>
+</html>

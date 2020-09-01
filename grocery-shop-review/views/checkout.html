@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/2344d96b53.js" crossorigin="anonymous"></script>
+    <title>Grocery Login</title>
+</head>
+
+<body>
+    <div class="navigation">
+        <div class="navigation-logo-text">
+            <i class="fas fa-store"></i>
+            <h3>Gospodaria Vass</h3>
+        </div>
+
+        <div class="navigation-list-menu">
+            <ul>
+                <li><a href="./main.html">Acasa</a><i class="fas fa-home"></i>
+                </li>
+            </ul>
+            <ul>
+                <li><a href="./main.html">Produse</a><i class="fas fa-utensils"></i></li>
+            </ul>
+            <ul>
+                <li><a href="../index.html">Cont</a><i class="fas fa-users"></i></li>
+            </ul>
+            <ul>
+                <li><a href="./contact.html">Contact</a><i class="fas fa-phone"></i></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="checkout-information">
+        <input type="text" placeholder="First Name" required>
+
+        <input type="text" placeholder="Last Name" required>
+
+        <input type="text" placeholder="Adress: Country City Street" required>
+
+        <input type="text" placeholder="#" required>
+    </div>
+
+    <div class="checkout-container">
+        <p id="total-price-products"></p>
+        <h5>Items in basket</h5>
+        <p id="items-in-basket"></p>
+        <button style="width: 300px;">Pay with <span class="pay-pal">Pay Pal</span></button>
+    </div>
+    <footer class="other-footer">
+        <h3>Copyright @Vass Krisztian "Kristo" Patrick || 2020</h3>
+    </footer>
+
+    <script src="../controllers/auth.js"></script>
+    <script src="../controllers/main.js"></script>
+
+</body>
+
+</html>

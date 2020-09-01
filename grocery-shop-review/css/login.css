@@ -1,0 +1,43 @@
+.container
+{
+    margin: auto;
+    width: 50%;
+    position: relative;
+
+    top: 75px;
+}
+
+form {
+    border: 3px solid #f1f1f1;
+  }
+  
+  /* Full-width inputs */
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+    width: 100%;
+  }
+
+.other-footer
+{
+    background-color: #6c757d;
+    padding: 8px 5px;
+    text-align: center;
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: white;
+}
